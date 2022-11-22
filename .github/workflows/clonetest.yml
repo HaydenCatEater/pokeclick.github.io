@@ -26,6 +26,11 @@ jobs:
          with:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
+       - name: Move docs
+       - run: mv pokeclicker/docs/* /
+
+            
+            
            
            
 
