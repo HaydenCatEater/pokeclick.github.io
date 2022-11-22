@@ -32,6 +32,7 @@ jobs:
          with:
            repository: 'pokeclick/pokeclick.github.io'
            platform: 'github'
+           path: '/home/runner'
        - run: | 
           cd tmp
           ls
