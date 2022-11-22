@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Pokeclicker
 
 # Controls when the workflow will run
 on:
@@ -22,11 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-       
+       - uses: sudosubin/git-clone-action@v1
+         with:
+           repository: 'pokeclicker/pokeclicker'
+           platform: 'github'
+           
+           
 
-      # Runs a single command using the runners shell
-      - name: Clone Pokeclicker
-        run: git clone https://github.com/pokeclicker/pokeclicker.git
+
 
 
       
