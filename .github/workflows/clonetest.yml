@@ -29,12 +29,8 @@ jobs:
            platform: 'github'
            path: '/tmp/'
        - run: > 
-          ls
           cd tmp
           ls
-          mv /docs/* /home/runnnder
-          cd ..
-          rm /tmp
                  
        
        - uses: stefanzweifel/git-auto-commit-action@v4
