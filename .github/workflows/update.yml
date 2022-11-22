@@ -31,8 +31,8 @@ jobs:
          echo "Before:"
          ls
       - run: | 
-          
           mv -v tmp/docs/* $PWD
+          rm /tmp/
           - run: |
           echo "After:"
           ls
