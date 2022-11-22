@@ -22,17 +22,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-       
-       - uses: sudosubin/git-clone-action@v1.0.1
-         with:
-           repository: 'pokeclicker/pokeclicker'
-           platform: 'github'
-           path: '/tmp/'
        - uses: sudosubin/git-clone-action@v1.0.1
          with:
            repository: 'pokeclick/pokeclick.github.io'
            platform: 'github'
            path: '/home/runner'
+       - uses: sudosubin/git-clone-action@v1.0.1
+         with:
+           repository: 'pokeclicker/pokeclicker'
+           platform: 'github'
+           path: '/tmp/'
        - run: | 
           cd tmp
           ls
