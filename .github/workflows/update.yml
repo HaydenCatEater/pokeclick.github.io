@@ -36,6 +36,7 @@ jobs:
           mv -v docs/* ~/
           cd ..
           rm -r tmp
+      - run: ls  
           
       - uses: zwaldowski/git-commit-action@v1
 
