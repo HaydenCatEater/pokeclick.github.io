@@ -28,6 +28,10 @@ jobs:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
            path: '/tmp/'
+       - uses: sudosubin/git-clone-action@v1.0.1
+         with:
+           repository: 'pokeclick/pokeclick.github.io'
+           platform: 'github'
        - run: | 
           cd tmp
           ls
