@@ -22,25 +22,30 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-       - uses: sudosubin/git-clone-action@v1.0.1
-         with:
-           repository: 'pokeclick/pokeclick.github.io'
-           platform: 'github'
-           path: '/home/runner'
-       - uses: sudosubin/git-clone-action@v1.0.1
-         with:
-           repository: 'pokeclicker/pokeclicker'
-           platform: 'github'
-           path: '/tmp/'
-       - run: | 
+      # Checkout the branch
+      - uses: actions/checkout@v2
+
+      - uses: sudosubin/git-clone-action@v1.0.1
+        with:
+            repository: 'pokeclicker/pokeclicker'
+            platform: 'github'
+            path: '/tmp/'
+      - run: | 
           cd tmp
           ls
           mv -v docs/* ~/
-       - run: rm -r tmp
-       - uses: zwaldowski/git-commit-action@v1
-         with:
-          commit_message: Weekly Update
-          author_name: Auto Update
+          - run: rm -r tmp
+
+      - name: setup git config
+        run: |
+          git config user.name "Weekly Update"
+          git config user.email "<>"
+
+      - name: commit
+        run: |
+          git add /home/runner/*
+          git commit -m "Weekly update"
+          git push origin master
 
             
             
