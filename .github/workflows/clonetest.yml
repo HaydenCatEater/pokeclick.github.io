@@ -28,7 +28,7 @@ jobs:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
            path: '/tmp/'
-       - run: > 
+       - run: | 
           cd tmp
           ls
                  
