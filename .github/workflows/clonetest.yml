@@ -31,7 +31,7 @@ jobs:
        - run: | 
           cd tmp
           ls
-          mv /docs/* ~/home/runner
+          mv -r docs/* ~/home/runner
        - run: rm tmp
                  
        
