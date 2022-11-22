@@ -22,14 +22,23 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+       - name: Clone
        - uses: sudosubin/git-clone-action@v1.0.1
          with:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
-       - run: ls
-       - uses: actions/checkout@v2
+           path: '/tmp/'
+       - name: Move docs
+       - run: mv  -v ~/tmp/docs/* ~/
+       - name: remove temp files
+       - run: rm tmp
+       - name: Commit
+       - uses: stefanzweifel/git-auto-commit-action@v4
          with:
-          token: ${{ secrets.PAT }}
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Weekly Update
+
 
             
             
