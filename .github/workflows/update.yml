@@ -31,8 +31,8 @@ jobs:
          echo "Before:"
          ls
       - run: | 
-          mv -v -f tmp/docs/* $PWD
-          rm /tmp/
+          rsync -a tmp/docs/ $PWD
+          rm -rf tmp/*
           - run: |
           echo "After:"
           ls
