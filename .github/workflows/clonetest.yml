@@ -28,10 +28,15 @@ jobs:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
            path: '/tmp/'
-       - run: cd tmp    
-       - run: ls
-       - run: mv -v /tmp/docs/ /home/runner/
-       - run: rm tmp
+       - name: Move & Clean
+       - run: > 
+          ls
+          cd tmp
+          ls
+          mv /docs/* /home/runnnder
+          cd ..
+          rm /tmp
+                 
        
        - uses: stefanzweifel/git-auto-commit-action@v4
          with:
