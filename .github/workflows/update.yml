@@ -34,7 +34,7 @@ jobs:
           cd tmp
           ls
           mv -v docs/* ~/
-          - run: rm -r tmp
+          rm -r tmp
 
       - name: setup git config
         run: |
