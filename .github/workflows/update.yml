@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checkout the branch
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.5.0
 
       - uses: sudosubin/git-clone-action@v1.0.1
         with:
@@ -36,17 +36,10 @@ jobs:
           mv -v docs/* ~/
           cd ..
           rm -r tmp
+          
+      - uses: zwaldowski/git-commit-action@v1
 
-      - name: setup git config
-        run: |
-          git config user.name "Weekly Update"
-          git config user.email "<>"
 
-      - name: commit
-        run: |
-          git add /home/runner/*
-          git commit -m "Weekly update"
-          git push origin master
 
             
             
