@@ -31,13 +31,13 @@ jobs:
             platform: 'github'
             path: '/tmp/'
       - run: |
-         ehco "Before:"
+         echo "Before:"
          ls
       - run: | 
           cd tmp
           mv -v /docs/* /home/runner
           - run: |
-          ehco "After:"
+          echo "After:"
           ls
       - run: |    
          git config user.name Weekly Update
