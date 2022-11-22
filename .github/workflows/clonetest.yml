@@ -28,10 +28,9 @@ jobs:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
            path: '/tmp/'
+       - run: cd tmp    
        - run: ls
-       - run: mv -v /tmp/docs/* ~/
-       - run: cd /tmp/
-       - run: ls
+       - run: mv -v /tmp/docs /home/runner/
        - run: rm tmp
        
        - uses: stefanzweifel/git-auto-commit-action@v4
