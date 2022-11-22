@@ -29,8 +29,9 @@ jobs:
            platform: 'github'
            path: '/tmp/'
        - run: ls
-       - run: mv  -v ~/tmp/docs/* ~/
- 
+       - run: mv -v /tmp/docs/* ~/
+       - run: cd /tmp/
+       - run: ls
        - run: rm tmp
        
        - uses: stefanzweifel/git-auto-commit-action@v4
