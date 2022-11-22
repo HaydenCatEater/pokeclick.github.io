@@ -30,16 +30,21 @@ jobs:
             repository: 'pokeclicker/pokeclicker'
             platform: 'github'
             path: '/tmp/'
+      - run: |
+         ehco "Before:"
+         ls
       - run: | 
-          ls
           cd tmp
+          mv -v /docs/* /home/runner
+          - run: |
+          ehco "After:"
           ls
-          mv -v /* /home/runner
-          cd ..
-          rm -r tmp
-          ls
-          
-      - uses: zwaldowski/git-commit-action@v1
+      - run: |    
+         git config user.name Weekly Update
+         git config user.email github-actions@github.com
+         git add .
+         git commit -m "generated"
+         git push
 
 
 
