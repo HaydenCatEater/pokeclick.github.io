@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-       - uses: sudosubin/git-clone-action@v1
+       - uses: sudosubin/git-clone-action@v1.0.1
          with:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
