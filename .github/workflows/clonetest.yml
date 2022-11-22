@@ -28,7 +28,6 @@ jobs:
            repository: 'pokeclicker/pokeclicker'
            platform: 'github'
            path: '/tmp/'
-       - name: Move & Clean
        - run: > 
           ls
           cd tmp
