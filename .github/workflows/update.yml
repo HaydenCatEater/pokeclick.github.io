@@ -34,7 +34,8 @@ jobs:
          echo "Before:"
          ls
       - run: | 
-          mv -v tmp/docs/* /home/runner/
+          
+          mv -v tmp/docs/* $PWD
           - run: |
           echo "After:"
           ls
