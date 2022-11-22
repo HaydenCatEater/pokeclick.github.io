@@ -32,7 +32,7 @@ jobs:
           cd tmp
           ls
           mv -v docs/* ~/
-       - run: rm tmp
+       - run: rm -r tmp
                  
        
        - uses: stefanzweifel/git-auto-commit-action@v4
