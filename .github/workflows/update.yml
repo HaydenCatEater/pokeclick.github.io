@@ -34,13 +34,12 @@ jobs:
           mv -v docs/* ~/
        - run: rm -r tmp
                  
-       
-       - uses: stefanzweifel/git-auto-commit-action@v4
+       - id: git_commit
+       - uses: zwaldowski/git-commit-action@v1
          with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
           commit_message: Weekly Update
-
+          author_name: Auto Update
+          working_directory: /~
 
             
             
