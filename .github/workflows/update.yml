@@ -37,7 +37,7 @@ jobs:
           echo "After:"
           ls
       - run: |    
-         git config user.name Weekly Update
+         git config user.name Daily Update
          git config user.email huh78@dsdjhsdjju.io
          git add .
          git commit -m "Weekly Update"
