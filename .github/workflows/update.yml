@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Pokeclicker
+name: Update From Main
 
 # Controls when the workflow will run
 on:
@@ -37,10 +37,10 @@ jobs:
           echo "After:"
           ls
       - run: |    
-         git config user.name Daily Update
+         git config user.name Update
          git config user.email huh78@dsdjhsdjju.io
          git add .
-         git commit -m "Hourly Update"
+         git commit -m "Update"
          git push
 
 
