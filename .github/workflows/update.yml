@@ -38,7 +38,7 @@ jobs:
           ls
       - run: |    
          git config user.name Update
-         git config user.email huh78@dsdjhsdjju.io
+         git config user.email 118825279+KUKHUA@users.noreply.github.com
          git add .
          git commit -m "Update"
          git push
