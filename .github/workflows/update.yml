@@ -27,6 +27,7 @@ jobs:
             repository: 'pokeclicker/pokeclicker'
             platform: 'github'
             path: '/tmp/'
+            ref: 'master'
       - run: |
          echo "Before:"
          ls
