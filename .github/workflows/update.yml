@@ -28,15 +28,9 @@ jobs:
             platform: 'github'
             path: '/tmp/'
             ref: 'master'
-      - run: |
-         echo "Before:"
-         ls
       - run: | 
           rsync -a tmp/docs/ $PWD
           rm -rf tmp/*
-          - run: |
-          echo "After:"
-          ls
       - run: |    
          git config user.name Update
          git config user.email 118825279+KUKHUA@users.noreply.github.com
